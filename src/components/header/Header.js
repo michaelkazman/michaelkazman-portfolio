@@ -26,11 +26,11 @@ class Header extends Component {
         <div>
           <header className="header">
             <NavLink to={link} tag={Link} className="logo">
-              <span style={{ color: theme.text, borderRadius: 5 }}> &lt;</span>
+              <span className="logo-name" style={{ color: theme.text, borderRadius: 5, padding: 0 }}> &lt;</span>
               <span className="logo-name" style={{ color: theme.text, borderRadius: 5 }}>
                 {greeting.logo_name}
               </span>
-              <span style={{ color: theme.text, borderRadius: 5 }}>/&gt;</span>
+              <span className="logo-name" style={{ color: theme.text, borderRadius: 5, padding: 0 }}>/&gt;</span>
             </NavLink>
             <input className="menu-btn" type="checkbox" id="menu-btn" />
             <label className="menu-icon" htmlFor="menu-btn">
@@ -43,6 +43,7 @@ class Header extends Component {
                   tag={Link}
                   activeStyle={{ fontWeight: "bold" }}
                   style={{ color: theme.text, borderRadius: 5 }}
+                  className="nav-btn"
                   onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
                   onMouseOut={(event) => onMouseOut(event)}
                 >
@@ -55,6 +56,7 @@ class Header extends Component {
                   tag={Link}
                   activeStyle={{ fontWeight: "bold" }}
                   style={{ color: theme.text, borderRadius: 5 }}
+                  className="nav-btn"
                   onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
                   onMouseOut={(event) => onMouseOut(event)}
                 >
@@ -67,6 +69,7 @@ class Header extends Component {
                   tag={Link}
                   activeStyle={{ fontWeight: "bold" }}
                   style={{ color: theme.text, borderRadius: 5 }}
+                  className="nav-btn"
                   onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
                   onMouseOut={(event) => onMouseOut(event)}
                 >
@@ -79,6 +82,7 @@ class Header extends Component {
                   tag={Link}
                   activeStyle={{ fontWeight: "bold" }}
                   style={{ color: theme.text, borderRadius: 5 }}
+                  className="nav-btn"
                   onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
                   onMouseOut={(event) => onMouseOut(event)}
                 >
@@ -91,6 +95,7 @@ class Header extends Component {
                   tag={Link}
                   activeStyle={{ fontWeight: "bold" }}
                   style={{ color: theme.text, borderRadius: 5 }}
+                  className="nav-btn"
                   onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
                   onMouseOut={(event) => onMouseOut(event)}
                 >
@@ -103,6 +108,7 @@ class Header extends Component {
                   tag={Link}
                   activeStyle={{ fontWeight: "bold" }}
                   style={{ color: theme.text, borderRadius: 5 }}
+                  className="nav-btn"
                   onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
                   onMouseOut={(event) => onMouseOut(event)}
                 >
