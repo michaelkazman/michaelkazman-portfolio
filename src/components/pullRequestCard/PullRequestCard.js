@@ -1,10 +1,15 @@
 import React, { Component } from "react";
 import "./PullRequestCard.css";
-import { OverlayTrigger, Tooltip } from "react-bootstrap";
+import Tooltip from "../../components/tooltip/Tooltip.js";
 import { Fade } from "react-reveal";
 
 class PullRequestCard extends Component {
+  constructor(props) {
+    super(props)
+  }
+  
   render() {
+    const { theme } = this.props;
     const pullRequest = this.props.pullRequest;
     var iconPR;
     var bgColor;
@@ -37,28 +42,19 @@ class PullRequestCard extends Component {
     if (pullRequest["mergedBy"] !== null) {
       const name = pullRequest["mergedBy"]["login"];
       mergedBy = (
-        <OverlayTrigger
-          key={name}
-          placement={"top"}
-          style={{ marginBottom: "5px" }}
-          overlay={
-            <Tooltip id={`tooltip-top`}>
-              <strong>{`Merged by ${name}`}</strong>
-            </Tooltip>
-          }
-        >
-          <a
-            href={pullRequest["mergedBy"]["url"]}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              className="merge-by-img"
-              src={pullRequest["mergedBy"]["avatarUrl"]}
-              alt=""
-            />
-          </a>
-        </OverlayTrigger>
+        <Tooltip title={`Merged by ${name}`} theme={theme}>
+              <a
+                href={pullRequest["mergedBy"]["url"]}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  className="merge-by-img"
+                  src={pullRequest["mergedBy"]["avatarUrl"]}
+                  alt=""
+                />
+              </a>
+        </Tooltip>
       );
     } else {
       mergedBy = <noscript></noscript>;

@@ -29,7 +29,7 @@ class Education extends Component {
                 <h3 className="heading-sub-text" style={{ color: theme.text }}>
                   Basic Qualification and Certifcations
                 </h3>
-                <CompetitiveSites logos={competitiveSites.competitiveSites} />
+                <CompetitiveSites logos={competitiveSites.competitiveSites} theme={theme} />
               </div>
             </div>
           </Fade>
