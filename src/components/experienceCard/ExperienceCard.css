@@ -4,10 +4,13 @@
   border-radius: 10px;
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .experience-card-logo-div {
-  margin: 10px;
+  margin: 20px;
+  width: 70px;
+  height: 70px;
 }
 
 .experience-card-body-div {
@@ -20,7 +23,8 @@
 }
 
 .experience-card-logo {
-  width: 70px;
+  width: inherit;
+  height: inherit;
 }
 
 .experience-card-title {
@@ -115,9 +119,6 @@
 
   .experience-card-logo {
     width: 100px;
-  }
-
-  .experience-card-body-div {
   }
 
   .experience-card-heading-left {
