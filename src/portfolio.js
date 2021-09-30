@@ -84,6 +84,7 @@ const socialMediaLinks = [
 ];
 
 const skills = {
+  title: "What I Do?",
   data: [
     {
       title: "Data Science & AI",
