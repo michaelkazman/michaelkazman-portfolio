@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./PullRequests.css";
 import { Fade } from "react-reveal";
 import PullRequestCard from "../../components/pullRequestCard/PullRequestCard";
-import pullRequestsData from "../../shared/opensource/pull_requests.json";
+import pullRequestsData from "../../static/opensource/pull_requests.json";
 
 class PullRequests extends Component {
   render() {

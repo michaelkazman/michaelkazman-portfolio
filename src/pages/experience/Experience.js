@@ -4,7 +4,7 @@ import Footer from "../../components/footer/Footer";
 import TopButton from "../../components/topButton/TopButton";
 import ExperienceAccordion from "../../containers/experienceAccordion/ExperienceAccordion.js";
 import "./Experience.css";
-import { experience } from "../../portfolio.js";
+import { experience } from "../../static/portfolio.js";
 import { Fade } from "react-reveal";
 import ExperienceImg from "./ExperienceImg";
 

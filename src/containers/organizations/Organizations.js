@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./Organizations.css";
 import { Fade } from "react-reveal";
 import OrganizationList from "../../components/organizationList/OrganizationList";
-import OrganizationsData from "../../shared/opensource/organizations.json";
+import OrganizationsData from "../../static/opensource/organizations.json";
 
 class Organizations extends Component {
   render() {
