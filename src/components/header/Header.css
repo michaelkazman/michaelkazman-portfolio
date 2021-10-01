@@ -93,10 +93,6 @@
   
 }
 
-.nav-btn:active {
-  background-color: 'red';
-}
-
 .nav-btn:hover {
   transition: ease-in 0.6s;
 }
