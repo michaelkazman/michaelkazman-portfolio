@@ -6,9 +6,9 @@ import PublicationCard from "../../components/publicationsCard/PublicationCard";
 import Button from "../../components/button/Button";
 import TopButton from "../../components/topButton/TopButton";
 import { Fade } from "react-reveal";
-import { projectsHeader, publicationsHeader } from "../../portfolio.js";
-import ProjectsData from "../../shared/opensource/projects.json";
-import PublicationData from "../../shared/opensource/publications.json";
+import { projectsHeader, publicationsHeader } from "../../static/portfolio.js";
+import ProjectsData from "../../static/opensource/projects.json";
+import PublicationData from "../../static/opensource/publications.json";
 import "./Projects.css";
 import ProjectsImg from "./ProjectsImg";
 

@@ -107,6 +107,18 @@ export const greenTheme = {
   headerColor: "#07beb877",
 };
 
+export const darkGreenTheme = {
+  body: "#1D1D1D",
+  text: "#FFFFFF",
+  highlight: "#9BEED8",
+  dark: "#031E26",
+  secondaryText: "#528190",
+  imageHighlight: "#07beb8",
+  compImgHighlight: "#E6E6E6",
+  jacketColor: "#56a3a6",
+  headerColor: "#07beb877",
+};
+
 export const orangeTheme = {
   body: "#FFF0EA",
   text: "#99401F",
@@ -131,4 +143,6 @@ export const frozenDreams = {
   headerColor: "#0E6BA877",
 };
 
-export const chosenTheme = greenTheme;
+export const lightTheme = greenTheme
+
+export const darkTheme = darkGreenTheme

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Doughnut } from "react-chartjs-2";
 import { Fade } from "react-reveal";
 import "./IssueChart.css";
-import IssueData from "../../shared/opensource/issues.json";
+import IssueData from "../../static/opensource/issues.json";
 
 class IssueChart extends Component {
   render() {

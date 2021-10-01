@@ -157,7 +157,7 @@ fetch(baseUrl, {
 
     console.log("Fetching the Pull Request Data.\n");
     fs.writeFile(
-      "./src/shared/opensource/pull_requests.json",
+      "./src/static/opensource/pull_requests.json",
       JSON.stringify(cropped),
       function (err) {
         if (err) {
@@ -192,7 +192,7 @@ fetch(baseUrl, {
 
     console.log("Fetching the Issues Data.\n");
     fs.writeFile(
-      "./src/shared/opensource/issues.json",
+      "./src/static/opensource/issues.json",
       JSON.stringify(cropped),
       function (err) {
         if (err) {
@@ -231,7 +231,7 @@ fetch(baseUrl, {
 
     console.log("Fetching the Contributed Organization Data.\n");
     fs.writeFile(
-      "./src/shared/opensource/organizations.json",
+      "./src/static/opensource/organizations.json",
       JSON.stringify(newOrgs),
       function (err) {
         if (err) {
@@ -281,7 +281,7 @@ fetch(baseUrl, {
 
     console.log("Fetching the Pinned Projects Data.\n");
     fs.writeFile(
-      "./src/shared/opensource/projects.json",
+      "./src/static/opensource/projects.json",
       JSON.stringify(newProjects),
       function (err) {
         if (err) {

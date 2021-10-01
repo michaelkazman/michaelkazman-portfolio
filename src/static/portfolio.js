@@ -7,20 +7,21 @@ const settings = {
 
 // SEO Related settings
 const seo = {
-  title: "Ashutosh's Portfolio",
+  title: "Michael's Portfolio",
   description:
     "A passionate individual who always thrives to work on end to end products which develop sustainable and scalable social and technical systems to create impact.",
   og: {
-    title: "Ashutosh Hathidara Portfolio",
+    title: "Michael Kazman Portfolio",
     type: "website",
-    url: "http://ashutoshhathidara.com/",
+    url: "http://michaelkazman.com/",
   },
 };
 
 // Home Page
 const greeting = {
-  title: "Michael Kazman",
-  logo_name: "AshutoshHathidara",
+  title: "Hello 👋",
+  name: "Michael Kazman",
+  logo_name: "michaelkazman",
   nickname: "SeniorFluffie",
   subTitle:
     "A passionate individual who always thrives to work on end to end products which develop sustainable and scalable social and technical systems to create impact.",
