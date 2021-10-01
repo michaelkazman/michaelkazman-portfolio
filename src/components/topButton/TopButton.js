@@ -12,9 +12,9 @@ export default function TopButton({ theme }) {
       document.body.scrollTop > 30 ||
       document.documentElement.scrollTop > 30
     ) {
-      document.getElementById("topButton").style.visibility = "visible";
+      document.getElementById("topButton").style.opacity = 1;
     } else {
-      document.getElementById("topButton").style.visibility = "hidden";
+      document.getElementById("topButton").style.opacity = 0;
     }
   }
 
@@ -31,7 +31,6 @@ export default function TopButton({ theme }) {
     /* For arrow icon */
     const arrow = document.getElementById("arrow");
     arrow.style.color = color;
-    arrow.style.backgroundColor = bgColor;
   };
 
   const onMouseLeave = (color, bgColor) => {
@@ -43,7 +42,6 @@ export default function TopButton({ theme }) {
     /* For arrow icon */
     const arrow = document.getElementById("arrow");
     arrow.style.color = color;
-    arrow.style.backgroundColor = bgColor;
   };
 
   return (
@@ -55,7 +53,7 @@ export default function TopButton({ theme }) {
         backgroundColor: theme.text,
         border: `solid 1px ${theme.text}`,
       }}
-      title="Go up"
+      title="Scroll to top"
       onMouseEnter={() => onMouseEnter(theme.text, theme.body)}
       onMouseLeave={() => onMouseLeave(theme.body, theme.text)}
     >

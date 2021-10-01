@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./IssueCard.css";
-import { OverlayTrigger, Tooltip } from "react-bootstrap";
+import Tooltip from "../../components/tooltip/Tooltip.js";
 import { Fade } from "react-reveal";
 
 class IssueCard extends Component {
@@ -28,28 +28,19 @@ class IssueCard extends Component {
     if (issue["assignees"]["nodes"].length > 0) {
       const name = issue["assignees"]["nodes"][0]["name"];
       assignee = (
-        <OverlayTrigger
-          key={name}
-          placement={"top"}
-          style={{ marginBottom: "5px" }}
-          overlay={
-            <Tooltip id={`tooltip-top`}>
-              <strong>{`Assigned to ${name}`}</strong>
-            </Tooltip>
-          }
+        <Tooltip title={`Assigned to ${name}`} theme={this.props.theme}>
+        <a
+          href={issue["assignees"]["nodes"][0]["url"]}
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <a
-            href={issue["assignees"]["nodes"][0]["url"]}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              className="assigned-to-img"
-              src={issue["assignees"]["nodes"][0]["avatarUrl"]}
-              alt=""
-            />
-          </a>
-        </OverlayTrigger>
+          <img
+            className="assigned-to-img"
+            src={issue["assignees"]["nodes"][0]["avatarUrl"]}
+            alt=""
+          />
+        </a>
+      </Tooltip>
       );
     } else {
       assignee = <noscript></noscript>;

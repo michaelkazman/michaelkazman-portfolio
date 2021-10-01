@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./ProjectLanguages.css";
-import { OverlayTrigger, Tooltip } from "react-bootstrap";
+import Tooltip from "../../components/tooltip/Tooltip.js";
 
 class ProjectLanguages extends Component {
   render() {
@@ -10,26 +10,18 @@ class ProjectLanguages extends Component {
           <ul className="dev-icons-languages">
             {this.props.logos.map((logo) => {
               return (
-                <OverlayTrigger
-                  key={logo.name}
-                  placement={"top"}
-                  overlay={
-                    <Tooltip id={`tooltip-top`}>
-                      <strong>{logo.name}</strong>
-                    </Tooltip>
-                  }
-                >
+                <Tooltip title={logo.name} theme={this.props.theme}>
                   <li
                     className="software-skill-inline-languages"
                     name={logo.skillName}
                   >
                     <span
-                      className="iconify"
-                      data-icon={logo.iconifyClass}
-                      data-inline="false"
+                    className="iconify"
+                    data-icon={logo.iconifyClass}
+                    data-inline="false"
                     ></span>
                   </li>
-                </OverlayTrigger>
+                </Tooltip>
               );
             })}
           </ul>

@@ -1,5 +1,4 @@
 #topButton {
-  visibility: hidden;
   position: fixed;
   bottom: 1.2rem;
   right: 1.5rem;
@@ -8,4 +7,6 @@
   outline: none;
   border-radius: 2rem;
   font-size: 1.5rem;
+  opacity: 0;
+  transition: ease-in-out 0.6s;
 }

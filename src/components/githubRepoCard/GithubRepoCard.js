@@ -37,6 +37,7 @@ export default function GithubRepoCard({ repo, theme }) {
             <ProjectLanguages
               className="repo-languages"
               logos={repo.languages}
+              theme={theme}
             />
           </div>
         </div>

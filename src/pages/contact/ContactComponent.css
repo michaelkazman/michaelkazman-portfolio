@@ -9,6 +9,7 @@
 
 .contact-heading-div {
   display: flex;
+  margin-bottom: 60px;
 }
 
 .blog-heading-div {
@@ -44,7 +45,6 @@
 
 .contact-heading-text-div {
   text-align: center;
-  margin-bottom: 64px;
 }
 
 .blog-heading-text-div {
@@ -156,7 +156,6 @@
 
   .blog-heading-div {
     flex-direction: column-reverse;
-    margin-top: 60px;
   }
 
   .address-heading-div {
@@ -174,6 +173,7 @@
 
   .contact-heading-div {
     flex-direction: column;
+    margin-bottom: 30px;
   }
 
   .contact-header-detail-text {

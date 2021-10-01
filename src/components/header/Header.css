@@ -1,9 +1,8 @@
 /* header */
-
 .header {
   display: block;
-  max-width: 90%;
-  padding: 20px 10px;
+  max-width: 94%;
+  padding: 30px 10px;
   margin: 0px auto;
 }
 
@@ -13,6 +12,7 @@
   list-style: none;
   overflow: hidden;
 }
+
 .grey-color {
   color: #868e96;
 }
@@ -28,17 +28,17 @@
   float: left;
   font-size: 1.5em;
   text-decoration: none;
-  margin-top: 10px;
   line-height: normal;
 }
+
 .header .logo-name {
-  font-family: "Agustina Regular";
-  font-weight: bold;
+  font-family: "Google Sans Regular";
+  font-weight: bolder;
   padding: 0 10px;
+  letter-spacing: 3px;
 }
 
 /* menu */
-
 .menu {
   font-family: "Google Sans Regular";
 }
@@ -50,11 +50,9 @@
 }
 
 /* menu icon */
-
 .header .menu-icon {
   cursor: pointer;
   display: inline-block;
-  float: right;
   padding: 28px 20px;
   position: relative;
   user-select: none;
@@ -88,8 +86,17 @@
   top: -5px;
 }
 
-/* menu btn */
+/* nav btn */
+.nav-btn {
+  transition: ease-out 0.6s;
+  margin: 0 2px;
+}
 
+.nav-btn:hover {
+  transition: ease-in 0.6s;
+}
+
+/* menu btn */
 .header .menu-btn {
   display: none;
 }

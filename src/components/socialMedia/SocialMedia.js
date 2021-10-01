@@ -6,10 +6,11 @@ import styled from "styled-components";
 const IconWrapper = styled.span`
   i {
     background-color: ${(props) => props.backgroundColor};
+    transition: ease-out 0.6s;
   }
   &:hover i {
     background-color: ${({ theme }) => theme.text};
-    transition: 0.3s ease-in;
+    transition: ease-in 0.4s;
   }
 `;
 
@@ -27,7 +28,6 @@ export default function socialMedia(props) {
             <IconWrapper {...media} {...props}>
               <i className={`fab ${media.fontAwesomeIcon}`}></i>
             </IconWrapper>
-            {/* <span></span> */}
           </a>
         );
       })}
