@@ -27,40 +27,21 @@
   margin-bottom: 10px;
 }
 
-/* .facebook i {
-  background-color: #3b5998;
+.icon-test {
+  vertical-align: middle;
 }
 
-.linkedin i {
-  background-color: #0e76a8;
+.fa-github:before {
+  vertical-align: middle;
 }
 
-.github i {
-  background-color: #333;
+.fa-linkedin-in:before {
+  vertical-align: middle;
 }
 
-.gitlab i {
-  background-color: #fca326;
+.fa-google:before {
+  vertical-align: middle;
 }
-
-.google i {
-  background-color: #ea4335;
-}
-
-.twitter i {
-  background-color: #1da1f2;
-}
-
-.instagram i {
-  background-color: #E4405F;
-} */
-
-/*Hover Transition*/
-/* .twitter i:hover, .google i:hover, .gitlab i:hover,
-.github i:hover ,.linkedin i:hover ,.facebook i:hover, .instagram i:hover{
-  background-color: black;
-  transition: 0.3s ease-in;
-} */
 
 /* Media Query */
 @media (max-width: 768px) {
