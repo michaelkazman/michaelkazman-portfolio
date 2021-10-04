@@ -27,7 +27,8 @@ const greeting = {
     "A passionate individual who always thrives to work on end to end products which develop sustainable and scalable social and technical systems to create impact.",
   resumeLink:
     "https://drive.google.com/open?id=1XYpYhLeqCdyx_q6l0bQoC7RgwQjAjXPf",
-  portfolio_repository: "https://github.com/michaelkazman/michaelkazman-portfolio",
+  portfolio_repository:
+    "https://github.com/michaelkazman/michaelkazman-portfolio",
 };
 
 const socialMediaLinks = [
@@ -645,6 +646,20 @@ const contactPageData = {
   },
 };
 
+const contactInfo = {};
+
+const achievementSection = {};
+
+const blogSection = {};
+
+const bigProjects = {};
+
+const podcastSection = {};
+
+const openSource = {};
+
+const talkSection = {};
+
 export {
   settings,
   seo,
@@ -658,4 +673,11 @@ export {
   projectsHeader,
   publicationsHeader,
   contactPageData,
+  contactInfo,
+  achievementSection,
+  blogSection,
+  bigProjects,
+  podcastSection,
+  openSource,
+  talkSection,
 };

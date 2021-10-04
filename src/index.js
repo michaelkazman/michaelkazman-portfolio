@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Provider } from 'react-redux';
+import { Provider } from "react-redux";
 import { BaseProvider } from "baseui";
 import { Provider as StyletronProvider } from "styletron-react";
 import { Client as Styletron } from "styletron-engine-atomic";
-import store from './app/store';
+import store from "./app/store";
 
 import "./index.css";
 // import "bootstrap/dist/css/bootstrap.min.css";
@@ -16,12 +16,12 @@ const engine = new Styletron();
 
 ReactDOM.render(
   <StyletronProvider value={engine}>
-      <BaseProvider>
-        <Provider store={store}>
-          <App />
-        </Provider>
-      </BaseProvider>
-    </StyletronProvider>,
+    <BaseProvider>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </BaseProvider>
+  </StyletronProvider>,
   document.getElementById("root")
 );
 

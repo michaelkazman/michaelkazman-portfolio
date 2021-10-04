@@ -1,56 +1,57 @@
+/* eslint-disable no-plusplus */
 const openSource = {
   githubConvertedToken: "Your Github Token Here.",
   githubUserName: "Your Github Username Here.",
 };
 
 const fetch = require("node-fetch");
-var fs = require("fs");
+const fs = require("fs");
 
-const query_pr = {
+const queryPr = {
   query: `
-	query {
-	  user(login: "${openSource.githubUserName}"){
-	    pullRequests(last: 100, orderBy: {field: CREATED_AT, direction: DESC}){
+query {
+  user(login: "${openSource.githubUserName}"){
+    pullRequests(last: 100, orderBy: {field: CREATED_AT, direction: DESC}){
       totalCount
       nodes{
         id
         title
         url
         state
-	      mergedBy {
-	          avatarUrl
-	          url
-	          login
-	      }
-	      createdAt
-	      number
+      mergedBy {
+          avatarUrl
+          url
+          login
+      }
+      createdAt
+      number
         changedFiles
-	      additions
-	      deletions
+      additions
+      deletions
         baseRepository {
-	          name
-	          url
-	          owner {
-	            avatarUrl
-	            login
-	            url
-	          }
-	        }
+          name
+          url
+          owner {
+            avatarUrl
+            login
+            url
+          }
+        }
       }
     }
-	}
 }
-	`,
+}
+`,
 };
 
-const query_issue = {
+const queryIssue = {
   query: `query{
 
-		user(login: "${openSource.githubUserName}") {
+user(login: "${openSource.githubUserName}") {
     issues(last: 100, orderBy: {field:CREATED_AT, direction: DESC}){
       totalCount
       nodes{
-      	id
+      id
         closed
         title
         createdAt
@@ -76,173 +77,153 @@ const query_issue = {
     }
   }
 
-	}`,
+}`,
 };
 
-const query_org = {
+const queryOrg = {
   query: `query{
-	user(login: "${openSource.githubUserName}") {
-	    repositoriesContributedTo(last: 100){
-	      totalCount
-	      nodes{
-	        owner{
-	          login
-	          avatarUrl
-	          __typename
-	        }
-	      }
-	    }
-	  }
-	}`,
+  user(login: "${openSource.githubUserName}") {
+    repositoriesContributedTo(last: 100){
+      totalCount
+      nodes{
+        owner{
+          login
+          avatarUrl
+          __typename
+        }
+      }
+    }
+  }
+}`,
 };
 
-const query_pinned_projects = {
+const queryPinnedProjects = {
   query: `
-	query { 
-	  user(login: "${openSource.githubUserName}") { 
-	    pinnedItems(first: 6, types: REPOSITORY) {
-	      totalCount
-	      nodes{
-	        ... on Repository{
-	          id
-		          name
-		          createdAt,
-		          url,
-		          description,
-		          isFork,
-		          languages(first:10){
-		            nodes{
-		              name
-		            }
-		          }
-	        }
-	      }
-		  }
-	  }
-	}
-	`,
+query { 
+  user(login: "${openSource.githubUserName}") { 
+    pinnedItems(first: 6, types: REPOSITORY) {
+      totalCount
+      nodes{
+        ... on Repository{
+          id
+          name
+          createdAt,
+          url,
+          description,
+          isFork,
+          languages(first:10){
+            nodes{
+              name
+            }
+          }
+        }
+      }
+  }
+  }
+}
+`,
 };
 
 const baseUrl = "https://api.github.com/graphql";
 
 const headers = {
   "Content-Type": "application/json",
-  Authorization: "bearer " + openSource.githubConvertedToken,
+  Authorization: `bearer ${openSource.githubConvertedToken}`,
 };
 
 fetch(baseUrl, {
   method: "POST",
-  headers: headers,
-  body: JSON.stringify(query_pr),
+  headers,
+  body: JSON.stringify(queryPr),
 })
   .then((response) => response.text())
   .then((txt) => {
     const data = JSON.parse(txt);
-    var cropped = { data: [] };
-    cropped["data"] = data["data"]["user"]["pullRequests"]["nodes"];
+    const cropped = { data: [] };
+    cropped.data = data.data.user.pullRequests.nodes;
 
-    var open = 0;
-    var closed = 0;
-    var merged = 0;
-    for (var i = 0; i < cropped["data"].length; i++) {
-      if (cropped["data"][i]["state"] === "OPEN") open++;
-      else if (cropped["data"][i]["state"] === "MERGED") merged++;
+    let open = 0;
+    let closed = 0;
+    let merged = 0;
+    for (let i = 0; i < cropped.data.length; i++) {
+      if (cropped.data[i].state === "OPEN") open++;
+      else if (cropped.data[i].state === "MERGED") merged++;
       else closed++;
     }
 
-    cropped["open"] = open;
-    cropped["closed"] = closed;
-    cropped["merged"] = merged;
-    cropped["totalCount"] = cropped["data"].length;
+    cropped.open = open;
+    cropped.closed = closed;
+    cropped.merged = merged;
+    cropped.totalCount = cropped.data.length;
 
-    console.log("Fetching the Pull Request Data.\n");
     fs.writeFile(
       "./src/static/opensource/pull_requests.json",
-      JSON.stringify(cropped),
-      function (err) {
-        if (err) {
-          console.log(err);
-        }
-      }
+      JSON.stringify(cropped)
     );
-  })
-  .catch((error) => console.log(JSON.stringify(error)));
+  });
 
 fetch(baseUrl, {
   method: "POST",
-  headers: headers,
-  body: JSON.stringify(query_issue),
+  headers,
+  body: JSON.stringify(queryIssue),
 })
   .then((response) => response.text())
   .then((txt) => {
     const data = JSON.parse(txt);
-    var cropped = { data: [] };
-    cropped["data"] = data["data"]["user"]["issues"]["nodes"];
+    const cropped = { data: [] };
+    cropped.data = data.data.user.issues.nodes;
 
-    var open = 0;
-    var closed = 0;
-    for (var i = 0; i < cropped["data"].length; i++) {
-      if (cropped["data"][i]["closed"] === false) open++;
+    let open = 0;
+    let closed = 0;
+    for (let i = 0; i < cropped.data.length; i++) {
+      if (cropped.data[i].closed === false) open++;
       else closed++;
     }
 
-    cropped["open"] = open;
-    cropped["closed"] = closed;
-    cropped["totalCount"] = cropped["data"].length;
+    cropped.open = open;
+    cropped.closed = closed;
+    cropped.totalCount = cropped.data.length;
 
-    console.log("Fetching the Issues Data.\n");
     fs.writeFile(
       "./src/static/opensource/issues.json",
-      JSON.stringify(cropped),
-      function (err) {
-        if (err) {
-          console.log(err);
-        }
-      }
+      JSON.stringify(cropped)
     );
-  })
-  .catch((error) => console.log(JSON.stringify(error)));
+  });
 
 fetch(baseUrl, {
   method: "POST",
-  headers: headers,
-  body: JSON.stringify(query_org),
+  headers,
+  body: JSON.stringify(queryOrg),
 })
   .then((response) => response.text())
   .then((txt) => {
     const data = JSON.parse(txt);
-    const orgs = data["data"]["user"]["repositoriesContributedTo"]["nodes"];
-    var newOrgs = { data: [] };
-    for (var i = 0; i < orgs.length; i++) {
-      var obj = orgs[i]["owner"];
-      if (obj["__typename"] === "Organization") {
-        var flag = 0;
-        for (var j = 0; j < newOrgs["data"].length; j++) {
-          if (JSON.stringify(obj) === JSON.stringify(newOrgs["data"][j])) {
+    const orgs = data.data.user.repositoriesContributedTo.nodes;
+    const newOrgs = { data: [] };
+    for (let i = 0; i < orgs.length; i++) {
+      const obj = orgs[i].owner;
+      // eslint-disable-next-line no-underscore-dangle
+      if (obj.__typename === "Organization") {
+        let flag = 0;
+        for (let j = 0; j < newOrgs.data.length; j++) {
+          if (JSON.stringify(obj) === JSON.stringify(newOrgs.data[j])) {
             flag = 1;
             break;
           }
         }
         if (flag === 0) {
-          newOrgs["data"].push(obj);
+          newOrgs.data.push(obj);
         }
       }
     }
 
-    console.log("Fetching the Contributed Organization Data.\n");
     fs.writeFile(
       "./src/static/opensource/organizations.json",
-      JSON.stringify(newOrgs),
-      function (err) {
-        if (err) {
-          console.log(err);
-        }
-      }
+      JSON.stringify(newOrgs)
     );
-  })
-  .catch((error) => console.log(JSON.stringify(error)));
+  });
 
-const languages_icons = {
+const languageIcons = {
   Python: "logos-python",
   "Jupyter Notebook": "logos-jupyter",
   HTML: "logos-html-5",
@@ -254,45 +235,32 @@ const languages_icons = {
 
 fetch(baseUrl, {
   method: "POST",
-  headers: headers,
-  body: JSON.stringify(query_pinned_projects),
+  headers,
+  body: JSON.stringify(queryPinnedProjects),
 })
   .then((response) => response.text())
   .then((txt) => {
     const data = JSON.parse(txt);
-    // console.log(txt);
-    const projects = data["data"]["user"]["pinnedItems"]["nodes"];
-    var newProjects = { data: [] };
-    for (var i = 0; i < projects.length; i++) {
-      var obj = projects[i];
-      var langobjs = obj["languages"]["nodes"];
-      var newLangobjs = [];
-      for (var j = 0; j < langobjs.length; j++) {
-        if (langobjs[j]["name"] in languages_icons) {
+    const projects = data.data.user.pinnedItems.nodes;
+    const newProjects = { data: [] };
+    for (let i = 0; i < projects.length; i++) {
+      const obj = projects[i];
+      const langobjs = obj.languages.nodes;
+      const newLangobjs = [];
+      for (let j = 0; j < langobjs.length; j++) {
+        if (langobjs[j].name in languageIcons) {
           newLangobjs.push({
-            name: langobjs[j]["name"],
-            iconifyClass: languages_icons[langobjs[j]["name"]],
+            name: langobjs[j].name,
+            iconifyClass: languageIcons[langobjs[j].name],
           });
         }
       }
-      obj["languages"] = newLangobjs;
-      newProjects["data"].push(obj);
+      obj.languages = newLangobjs;
+      newProjects.data.push(obj);
     }
 
-    console.log("Fetching the Pinned Projects Data.\n");
     fs.writeFile(
       "./src/static/opensource/projects.json",
-      JSON.stringify(newProjects),
-      function (err) {
-        if (err) {
-          console.log(
-            "Error occured in pinned projects 1",
-            JSON.stringify(err)
-          );
-        }
-      }
+      JSON.stringify(newProjects)
     );
-  })
-  .catch((error) =>
-    console.log("Error occured in pinned projects 2", JSON.stringify(error))
-  );
+  });
