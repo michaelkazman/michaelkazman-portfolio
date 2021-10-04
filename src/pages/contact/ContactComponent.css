@@ -72,6 +72,7 @@
   line-height: 1.1;
   text-align: center;
   margin-top: 60px;
+  margin-bottom: 20px;
 }
 
 .blog-heading-text {
@@ -125,6 +126,18 @@
   display: flex;
   justify-content: center;
   margin-top: 0;
+}
+
+.profile-image {
+  border-radius: 50%;
+  border: 0.2rem solid black;
+  margin-left: auto;
+  margin-bottom: 16px;
+  width: 220px;
+  height: 220px;
+  box-shadow: grey 0 30px 30px -30px;
+  transition: all 0.3s ease-out;
+  object-fit: cover;
 }
 
 @media (max-width: 1380px) {

@@ -1,27 +1,15 @@
 import React from 'react';
 import './Tooltip.css';
-import { OverlayTrigger, Tooltip as BootstrapTooltip } from 'react-bootstrap';
+import { Tooltip as MUITooltip } from '@mui/material/';
 
-const Tooltip = ({ children, title, theme }) => (
-  <OverlayTrigger
+const Tooltip = ({ children, title }) => (
+  <MUITooltip
+    title={title}
+    arrow
     placement="bottom"
-    overlay={(
-      <BootstrapTooltip
-        className="tooltip-top"
-        style={{
-          backgroundColor: theme?.secondaryText || '#000',
-          color: '#fff',
-          border: 'none',
-          borderRadius: 4,
-          padding: '4px 8px',
-        }}
-      >
-        {title}
-      </BootstrapTooltip>
-    )}
   >
     {children}
-  </OverlayTrigger>
+  </MUITooltip>
 );
 
 export default Tooltip;
