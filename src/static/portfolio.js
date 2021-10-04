@@ -19,7 +19,7 @@ const seo = {
 
 // Home Page
 const greeting = {
-  title: "Hello 👋",
+  title: "Hello",
   name: "Michael Kazman",
   logo_name: "michaelkazman",
   nickname: "SeniorFluffie",

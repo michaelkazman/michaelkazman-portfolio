@@ -16,6 +16,8 @@ export default function Greeting(props) {
             <div>
               <h1 className="greeting-text" style={{ color: theme.text }}>
                 {greeting.title}
+                {' '}
+                <span className="wave-emoji" role="img" aria-label="wave emoji">👋</span>
               </h1>
               <p
                 className="greeting-text-p subTitle"
