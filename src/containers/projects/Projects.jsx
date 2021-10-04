@@ -6,14 +6,14 @@ import GithubRepoCard from '../../components/githubRepoCard/GithubRepoCard';
 import Button from '../../components/button/Button';
 import { openSource } from '../../static/portfolio';
 
-export default function Projects() {
+const Projects = () => {
   const [repo, setrepo] = useState([]);
 
-  function setrepoFunction(array) {
+  const setrepoFunction = (array) => {
     setrepo(array);
-  }
+  };
 
-  function getRepoData() {
+  const getRepoData = () => {
     const client = new ApolloClient({
       uri: 'https://api.github.com/graphql',
       request: (operation) => {
@@ -58,7 +58,7 @@ export default function Projects() {
       .then((result) => {
         setrepoFunction(result.data.repositoryOwner.pinnedRepositories.edges);
       });
-  }
+  };
 
   useEffect(() => {
     getRepoData();
@@ -73,9 +73,11 @@ export default function Projects() {
       <Button
         text="More Projects"
         className="project-button"
-        href="https://github.com/ashutosh1919"
+        href="https://github.com/michaelkazman"
         newTab
       />
     </div>
   );
-}
+};
+
+export default Projects;

@@ -14,26 +14,26 @@ const onMouseOut = (event, color, bgColor) => {
   el.style.backgroundColor = bgColor;
 };
 
-export default function Button({
+const Button = ({
   text, className, href, newTab, theme, ...props
-}) {
-  return (
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    <div className={className} {...props}>
-      <a
-        className="main-button"
-        href={href}
-        target={newTab && '_blank'}
-        style={{
-          color: theme.body,
-          backgroundColor: theme.text,
-          border: `solid 1px ${theme.text}`,
-        }}
-        onMouseEnter={(event) => onMouseEnter(event, theme.text, theme.body)}
-        onMouseOut={(event) => onMouseOut(event, theme.body, theme.text)}
-      >
-        {text}
-      </a>
-    </div>
-  );
-}
+}) => (
+  // eslint-disable-next-line react/jsx-props-no-spreading
+  <div className={className} {...props}>
+    <a
+      className="main-button"
+      href={href}
+      target={newTab && '_blank'}
+      style={{
+        color: theme.body,
+        backgroundColor: theme.text,
+        border: `solid 1px ${theme.text}`,
+      }}
+      onMouseEnter={(event) => onMouseEnter(event, theme.text, theme.body)}
+      onMouseOut={(event) => onMouseOut(event, theme.body, theme.text)}
+    >
+      {text}
+    </a>
+  </div>
+);
+
+export default Button;

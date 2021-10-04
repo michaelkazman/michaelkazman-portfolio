@@ -8,12 +8,12 @@ import FullStackImg from './FullStackImg';
 import CloudInfraImg from './CloudInfraImg';
 import DesignImg from './DesignImg';
 
-function GetSkillSvg({ fileName, theme }) {
+const GetSkillSvg = ({ fileName, theme }) => {
   if (fileName === 'DataScienceImg') return <DataScienceImg theme={theme} />;
   if (fileName === 'FullStackImg') return <FullStackImg theme={theme} />;
   if (fileName === 'CloudInfraImg') return <CloudInfraImg theme={theme} />;
   return <DesignImg theme={theme} />;
-}
+};
 
 const SkillSection = ({ theme }) => (
   <div>

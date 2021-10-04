@@ -4,31 +4,31 @@ import React from 'react';
 import './StartupProjects.css';
 import { bigProjects } from '../../static/portfolio';
 
-export default function StartupProject() {
-  function openProjectInNewWindow(url) {
-    const win = window.open(url, '_blank');
-    win.focus();
-  }
+const openProjectInNewWindow = (url) => {
+  const win = window.open(url, '_blank');
+  win.focus();
+};
 
-  return (
-    <div className="main" id="projects">
-      <div>
-        <h1 className="skills-heading">{bigProjects.title}</h1>
-        <p className="subTitle project-subtitle">{bigProjects.subtitle}</p>
-        <div className="startup-projects-main">
-          <div className="startup-project-text">
-            {bigProjects.projects.map((project) => (
-              <div
-                className="saaya-health-div"
-                onClick={() => openProjectInNewWindow(project.link)}
-              >
-                <img alt="Saad Working" src={project.image} />
-              </div>
-            ))}
-          </div>
-          <div className="starup-project-image" />
+const StartupProject = () => (
+  <div className="main" id="projects">
+    <div>
+      <h1 className="skills-heading">{bigProjects.title}</h1>
+      <p className="subTitle project-subtitle">{bigProjects.subtitle}</p>
+      <div className="startup-projects-main">
+        <div className="startup-project-text">
+          {bigProjects.projects.map((project) => (
+            <div
+              className="saaya-health-div"
+              onClick={() => openProjectInNewWindow(project.link)}
+            >
+              <img alt="Saad Working" src={project.image} />
+            </div>
+          ))}
         </div>
+        <div className="starup-project-image" />
       </div>
     </div>
-  );
-}
+  </div>
+);
+
+export default StartupProject;

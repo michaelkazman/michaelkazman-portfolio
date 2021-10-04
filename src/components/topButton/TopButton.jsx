@@ -3,12 +3,12 @@
 import React from 'react';
 import './TopButton.css';
 
-function GoUpEvent() {
+const GoUpEvent = () => {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
-}
+};
 
-function scrollFunction() {
+const scrollFunction = () => {
   if (
     document.body.scrollTop > 30
     || document.documentElement.scrollTop > 30
@@ -17,7 +17,7 @@ function scrollFunction() {
   } else {
     document.getElementById('topButton').style.opacity = 0;
   }
-}
+};
 
 window.onscroll = () => {
   scrollFunction();
