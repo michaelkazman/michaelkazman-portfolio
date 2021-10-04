@@ -1,9 +1,4 @@
-.tooltip-top > .tooltip-inner {
-    /* background-color: #000;
-    color: #fff;
-    border: 1px solid #062e56; */
+.tooltip-container {
+  background-color: "#000";
+  color: "#fff";
 }
-  
-.tooltip-top > .tooltip-arrow {
-    border-top: 5px solid #062e56;
- }
