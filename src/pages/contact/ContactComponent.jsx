@@ -31,6 +31,13 @@ const Contact = ({ theme, onToggle }) => (
             >
               {ContactData.title}
             </h1>
+            <div>
+              <img
+                src={require('../../assets/images/michaelkazman_headshot.png')}
+                alt="profile"
+                className="profile-image"
+              />
+            </div>
             <p
               className="contact-header-detail-text subTitle"
               style={{ color: theme.secondaryText }}

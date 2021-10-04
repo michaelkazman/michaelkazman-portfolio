@@ -30,7 +30,7 @@ const Contact = () => (
       <div className="contact-image-div">
         <img
           alt="Saad Working"
-          src="../../assests/images/contactMail.png"
+          src={require('../../assets/images/contactMail.png')}
         />
       </div>
     </div>

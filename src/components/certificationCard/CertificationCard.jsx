@@ -18,7 +18,7 @@ const CertificationCard = ({ theme, certificate }) => (
           >
             <img
               className="logo_img"
-              src={`../../assests/images/${certificate.logo_path}`}
+              src={require(`../../assets/images/${certificate.logo_path}`)}
               alt={certificate.alt_name}
             />
           </div>
