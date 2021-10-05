@@ -16,6 +16,7 @@ const ProjectLanguages = ({ theme, logos }) => (
                 className="iconify"
                 data-icon={logo.iconifyClass}
                 data-inline="false"
+                style={logo.style}
               />
             </li>
           </Tooltip>

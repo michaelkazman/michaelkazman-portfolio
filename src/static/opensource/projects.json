@@ -1,1 +1,158 @@
-{"data":[{"id":"MDEwOlJlcG9zaXRvcnkyNDU0NjcyNzQ=","name":"masterPortfolio","createdAt":"2020-03-06T16:26:54Z","url":"https://github.com/ashutosh1919/masterPortfolio","description":"The complete portfolio website hosted using github pages (gh-pages). Visit the website here : ","isFork":false,"languages":[{"name":"HTML","iconifyClass":"logos-html-5"},{"name":"CSS","iconifyClass":"logos-css-3"},{"name":"JavaScript","iconifyClass":"logos-javascript"}]},{"id":"MDEwOlJlcG9zaXRvcnkyNjkwNzUwMjM=","name":"truvisory","createdAt":"2020-06-03T11:53:55Z","url":"https://github.com/ashutosh1919/truvisory","description":"This project is meant to provide resources to users who want to access good LinkedIn posts which contains resources to learn any Technology, Design, Self-Branding, Motivation etc. You can visit project by:","isFork":false,"languages":[{"name":"HTML","iconifyClass":"logos-html-5"},{"name":"CSS","iconifyClass":"logos-css-3"},{"name":"JavaScript","iconifyClass":"logos-javascript"}]},{"id":"MDEwOlJlcG9zaXRvcnkyNzM1MTI1NTE=","name":"ml-data-bot","createdAt":"2020-06-19T14:24:55Z","url":"https://github.com/ashutosh1919/ml-data-bot","description":"Chatbot which helps you to get important statistics from the data to get insights to build Machine learning, Deep learning and Statistical models","isFork":false,"languages":[{"name":"Python","iconifyClass":"logos-python"}]},{"id":"MDEwOlJlcG9zaXRvcnkxNTU5NTE3NTk=","name":"Stock-Prediction-using-LSTM","createdAt":"2018-11-03T05:00:56Z","url":"https://github.com/ashutosh1919/Stock-Prediction-using-LSTM","description":"This Project is predicting stocks for 32 companies with error less than 1% using LSTM Networks.","isFork":false,"languages":[{"name":"Python","iconifyClass":"logos-python"},{"name":"Jupyter Notebook","iconifyClass":"logos-jupyter"}]},{"id":"MDEwOlJlcG9zaXRvcnkyMDIxNDc4ODA=","name":"Pick-Parser","createdAt":"2019-08-13T13:13:00Z","url":"https://github.com/dsc-iiitdmk/Pick-Parser","description":"This Project is to create a tool which can parse the Resumes and transform them into our own templates","isFork":false,"languages":[{"name":"Python","iconifyClass":"logos-python"}]},{"id":"MDEwOlJlcG9zaXRvcnkxODIxMjk3NTQ=","name":"Survival_3D_Game","createdAt":"2019-04-18T17:25:51Z","url":"https://github.com/ashutosh1919/Survival_3D_Game","description":"Survival Game using Unity3D","isFork":false,"languages":[{"name":"C#","iconifyClass":"logos-c-sharp"}]}]}
+{
+  "data": [
+    {
+      "id": "MDEwOlJlcG9zaXRvcnkyNDU0NjcyN12=",
+      "name": "Portfolio",
+      "createdAt": "2021-09-30",
+      "url": "https://github.com/michaelkazman/michaelkazman-portfolio",
+      "description": "My long lost portfolio, let me know if you find it...",
+      "isFork": true,
+      "languages": [
+        {
+          "name": "HTML",
+          "iconifyClass": "logos-html-5"
+        },
+        {
+          "name": "CSS",
+          "iconifyClass": "logos-css-3"
+        },
+        {
+          "name": "JavaScript",
+          "iconifyClass": "logos-javascript"
+        }
+      ]
+    },
+    {
+      "id": "MDEwOlJlcG9zaXRvcnkyNDU0NjcyNzQ=",
+      "name": "EarthCam-TRNG",
+      "createdAt": "2021-03-24",
+      "url": "https://github.com/michaelkazman/earthcam-trng",
+      "description": "Utilizes Python and OpenCV to scrape global live camera feeds as entropy for a custom Node.js",
+      "isFork": false,
+      "languages": [
+        {
+          "name": "Python",
+          "iconifyClass": "logos-python"
+        },
+        {
+          "name": "OpenCV",
+          "iconifyClass": "logos-opencv"
+        },
+        {
+          "name": "NodeJS",
+          "iconifyClass": "logos-nodejs-icon"
+        }
+      ]
+    },
+    {
+      "id": "MDEwOlJlcG9zaXRvcnkyNjkwNzUwMjM=",
+      "name": "Reconnect",
+      "createdAt": "2021-01-31",
+      "url": "https://github.com/Reconnect-CUHacking2021/reconnect",
+      "description": "A government safety app for connecting users with storeowners in a post COVID-19 world",
+      "isFork": false,
+      "languages": [
+        {
+          "name": "React",
+          "iconifyClass": "logos-react"
+        },
+        {
+          "name": "Ionic",
+          "iconifyClass": "logos-ionic-icon"
+        },
+        {
+          "name": "Django",
+          "iconifyClass": "logos-django-icon"
+        },
+        {
+          "name": "SQLite",
+          "iconifyClass": "vscode-icons:file-type-sqlite"
+        }
+      ]
+    },
+    {
+      "id": "MDEwOlJlcG9zaXRvcnkyNzM1MTI1NTE=",
+      "name": "ARG Classifier",
+      "createdAt": "2021-04-21",
+      "url": "https://github.com/michaelkazman/age-race-gender-classifier",
+      "description": "CNN capable of classifying age, race, and gender, trained on a specialized UTKFace dataset",
+      "isFork": false,
+      "languages": [
+        {
+          "name": "Jupyter",
+          "iconifyClass": "logos-jupyter"
+        },
+        {
+          "name": "Python",
+          "iconifyClass": "logos-python"
+        },
+        {
+          "name": "Tensorflow",
+          "iconifyClass": "logos-tensorflow"
+        },
+        {
+          "name": "Keras",
+          "iconifyClass": "simple-icons:keras",
+          "style": {
+            "backgroundColor": "white",
+            "color": "#D00000"
+          }
+        }
+      ]
+    },
+    {
+      "id": "MDEwOlJlcG9zaXRvcnkxNTU5NTE3NTk=",
+      "name": "StatFinder",
+      "createdAt": "2018-05-22",
+      "url": "https://github.com/michaelkazman/statfinder",
+      "description": "Chrome extension using to fetch and render multi-structured video game data",
+      "isFork": false,
+      "languages": [
+        {
+          "name": "jQuery",
+          "iconifyClass": "simple-icons:jquery",
+          "style": {
+            "color": "#1769AA"
+          }
+        },
+        {
+          "name": "HTML",
+          "iconifyClass": "logos-html-5"
+        },
+        {
+          "name": "CSS",
+          "iconifyClass": "logos-css-3"
+        }
+      ]
+    },
+    {
+      "id": "MDEwOlJlcG9zaXRvcnkyMDIxNDc4ODA=",
+      "name": "SlickFifths",
+      "createdAt": "2018-04-04",
+      "url": "https://github.com/michaelkazman/slickfifths",
+      "description": "Full-service e-store to sell vinyls",
+      "isFork": false,
+      "languages": [
+        {
+          "name": "NodeJS",
+          "iconifyClass": "logos-nodejs-icon"
+        },
+        {
+          "name": "Handlebars",
+          "iconifyClass": "logos-handlebars",
+          "style": {
+            "width": "50px"
+          }
+        },
+        {
+          "name": "Paypal",
+          "iconifyClass": "logos-paypal"
+        },
+        {
+          "name": "MongoDB",
+          "iconifyClass": "vscode-icons:file-type-mongo"
+        }
+      ]
+    }
+  ]
+}

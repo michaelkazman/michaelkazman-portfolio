@@ -20,7 +20,7 @@
 }
 
 .main-button:hover {
-  transition: ease-in 0.4s;
+  transition: ease-in 0.3s;
   transform: translateY(-3px);
 }
 

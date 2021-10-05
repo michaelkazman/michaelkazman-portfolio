@@ -33,7 +33,7 @@ const Contact = ({ theme, onToggle }) => (
             </h1>
             <div>
               <img
-                src={require('../../assets/images/michaelkazman_headshot.png')}
+                src={require(`../../assets/images/${ContactData.profile_image_path}`)}
                 alt="profile"
                 className="profile-image"
               />
@@ -62,7 +62,7 @@ const Contact = ({ theme, onToggle }) => (
             </p>
             <div className="blogsite-btn-div">
               <Button
-                text="Visit My Blogsite"
+                text="Checkout My Blog!"
                 newTab
                 href={blogSection.link}
                 theme={theme}
