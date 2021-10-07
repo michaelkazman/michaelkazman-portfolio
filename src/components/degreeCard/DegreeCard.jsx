@@ -10,7 +10,7 @@ const DegreeCard = ({ theme, degree }) => (
           style={{
             maxWidth: '100%',
             maxHeight: '100%',
-            transform: 'scale(50%, 50%)',
+            transform: 'scale(90%, 90%)',
           }}
           src={require(`../../assets/images/${degree.logo_path}`)}
           alt={degree.alt_name}
@@ -38,11 +38,15 @@ const DegreeCard = ({ theme, degree }) => (
           </div>
         </div>
         <div className="body-content">
-          {degree.descriptions.map((sentence) => (
-            <p key={sentence} className="content-list" style={{ color: theme.text }}>
-              {sentence}
-            </p>
-          ))}
+          <ul>
+            {degree.descriptions.map((sentence) => (
+              <p key={sentence} className="content-list" style={{ color: theme.text }}>
+                <li>
+                  {sentence}
+                </li>
+              </p>
+            ))}
+          </ul>
           <a
             href={degree.website_link}
             target="_blank"

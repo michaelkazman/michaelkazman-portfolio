@@ -11,6 +11,7 @@ const ExperienceCard = ({ theme, experience }) => (
         className="experience-card-logo"
         src={require(`../../assets/images/${experience.logo_path}`)}
         alt=""
+        style={experience.imgStyle}
       />
     </div>
     <div className="experience-card-body-div">
@@ -56,6 +57,14 @@ const ExperienceCard = ({ theme, experience }) => (
       >
         {experience.description}
       </p>
+      <ul
+        className="experience-card-description"
+        style={{ color: theme.text }}
+      >
+        {experience.tasks.map((text) => (
+          <li>{text}</li>
+        ))}
+      </ul>
     </div>
   </div>
 );

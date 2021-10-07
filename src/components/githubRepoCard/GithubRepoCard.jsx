@@ -33,8 +33,6 @@ const GithubRepoCard = ({ repo, theme }) => (
             className="repo-creation-date subTitle"
             style={{ color: theme.secondaryText }}
           >
-            Created on
-            {' '}
             {repo.createdAt.split('T')[0]}
           </p>
           <ProjectLanguages

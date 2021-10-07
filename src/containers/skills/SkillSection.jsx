@@ -36,15 +36,19 @@ const SkillSection = ({ theme }) => (
           </Fade>
           <Fade right duration={2000}>
             <div>
-              {skill.skills.map((skillSentence) => (
-                <p
-                  key={skillSentence}
-                  className="subTitle skills-text"
-                  style={{ color: theme.secondaryText }}
-                >
-                  {skillSentence}
-                </p>
-              ))}
+              <ul>
+                {skill.skills.map((skillSentence) => (
+                  <p>
+                    <li
+                      key={skillSentence}
+                      className="subTitle skills-text"
+                      style={{ color: theme.secondaryText }}
+                    >
+                      {skillSentence}
+                    </li>
+                  </p>
+                ))}
+              </ul>
             </div>
           </Fade>
         </div>
