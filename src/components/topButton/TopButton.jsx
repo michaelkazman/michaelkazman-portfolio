@@ -23,18 +23,7 @@ window.onscroll = () => {
   scrollFunction();
 };
 
-const onMouseEnter = (color, bgColor) => {
-  /* For the button */
-  const topButton = document.getElementById('topButton');
-  topButton.style.color = color;
-  topButton.style.backgroundColor = bgColor;
-
-  /* For arrow icon */
-  const arrow = document.getElementById('arrow');
-  arrow.style.color = color;
-};
-
-const onMouseLeave = (color, bgColor) => {
+const onMouseEvent = (color, bgColor) => {
   /* For the button */
   const topButton = document.getElementById('topButton');
   topButton.style.color = color;
@@ -56,8 +45,8 @@ const TopButton = ({ theme }) => (
       border: `solid 1px ${theme.text}`,
     }}
     title="Scroll to top"
-    onMouseEnter={() => onMouseEnter(theme.text, theme.body)}
-    onMouseLeave={() => onMouseLeave(theme.body, theme.text)}
+    onMouseEnter={() => onMouseEvent(theme.text, theme.body)}
+    onMouseLeave={() => onMouseEvent(theme.body, theme.text)}
   >
     <i className="fas fa-arrow-up" id="arrow" aria-hidden="true" />
   </div>
