@@ -9,7 +9,7 @@ const openRepoinNewTab = (url) => {
   win.focus();
 };
 
-const GithubRepoCard = ({ repo, theme }) => (
+const PublicationCard = ({ repo, theme }) => (
   <div>
     <Fade bottom duration={2000} distance="40px">
       <div
@@ -41,4 +41,4 @@ const GithubRepoCard = ({ repo, theme }) => (
   </div>
 );
 
-export default GithubRepoCard;
+export default PublicationCard;

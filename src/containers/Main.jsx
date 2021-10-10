@@ -1,15 +1,14 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import { Route, Switch, HashRouter } from 'react-router-dom';
-import Home from '../pages/home/HomeComponent';
+import Home from '../pages/home/Home';
 import Splash from '../pages/splash/Splash';
-import Education from '../pages/education/EducationComponent';
+import Education from '../pages/education/Education';
 import Experience from '../pages/experience/Experience';
-import Opensource from '../pages/opensource/Opensource';
-import Contact from '../pages/contact/ContactComponent';
-import Projects from '../pages/projects/Projects';
+import Contact from '../pages/contact/Contact';
+import Project from '../pages/project/Project';
 import { settings } from '../static/portfolio';
-import Error404 from '../pages/errors/error404/Error';
+import Error from '../pages/error/Error';
 
 const Main = ({ theme }) => (
   <div>
@@ -42,12 +41,6 @@ const Main = ({ theme }) => (
           )}
         />
         <Route
-          path="/opensource"
-          render={(props) => (
-            <Opensource {...props} theme={theme} />
-          )}
-        />
-        <Route
           path="/contact"
           render={(props) => (
             <Contact {...props} theme={theme} />
@@ -62,13 +55,13 @@ const Main = ({ theme }) => (
         <Route
           path="/projects"
           render={(props) => (
-            <Projects {...props} theme={theme} />
+            <Project {...props} theme={theme} />
           )}
         />
         <Route
           path="*"
           render={(props) => (
-            <Error404 {...props} theme={theme} />
+            <Error {...props} theme={theme} error={404} />
           )}
         />
       </Switch>

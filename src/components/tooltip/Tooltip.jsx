@@ -1,6 +1,6 @@
 import React from 'react';
-import './Tooltip.css';
 import { Tooltip as MUITooltip } from '@mui/material/';
+import './Tooltip.css';
 
 const Tooltip = ({ children, title }) => (
   <MUITooltip

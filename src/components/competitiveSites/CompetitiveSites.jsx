@@ -1,6 +1,6 @@
 import React from 'react';
-import './CompetitiveSites.css';
 import Tooltip from '../tooltip/Tooltip';
+import './CompetitiveSites.css';
 
 const CompetitiveSites = ({ theme, logos }) => (
   <div className="competitive-sites-main-div">

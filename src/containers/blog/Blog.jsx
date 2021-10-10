@@ -3,7 +3,7 @@ import './Blog.css';
 import BlogCard from '../../components/blogCard/BlogCard';
 import { blogSection } from '../../static/portfolio';
 
-const Blogs = () => (
+const BlogContainer = () => (
   <div className="main" id="blogs">
     <div className="blog-header">
       <h1 className="blog-header-text">{blogSection.title}</h1>
@@ -26,4 +26,4 @@ const Blogs = () => (
   </div>
 );
 
-export default Blogs;
+export default BlogContainer;
