@@ -2,7 +2,7 @@ import React from 'react';
 import './Podcast.css';
 import { podcastSection } from '../../static/portfolio';
 
-const Podcast = () => (
+const PodcastContainer = () => (
   <div className="main">
     <div className="podcast-header">
       <h1 className="podcast-header-title">{podcastSection.title}</h1>
@@ -26,4 +26,4 @@ const Podcast = () => (
   </div>
 );
 
-export default Podcast;
+export default PodcastContainer;

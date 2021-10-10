@@ -15,7 +15,12 @@ const onMouseOut = (event, color, bgColor) => {
 };
 
 const Button = ({
-  text, className, href, newTab, theme, ...props
+  text,
+  className,
+  href,
+  newTab,
+  theme,
+  ...props
 }) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <div className={className} {...props}>

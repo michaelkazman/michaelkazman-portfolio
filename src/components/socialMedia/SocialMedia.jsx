@@ -26,10 +26,7 @@ const socialMedia = () => (
         rel="noopener noreferrer"
         key={link}
       >
-        <IconWrapper {...{
-          backgroundColor,
-        }}
-        >
+        <IconWrapper backgroundColor={backgroundColor}>
           <i className={`fab ${fontAwesomeIcon}`} />
         </IconWrapper>
       </a>

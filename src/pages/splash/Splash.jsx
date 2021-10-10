@@ -6,12 +6,12 @@ import LoaderLogo from '../../components/Loader/LoaderLogo';
 const AnimatedSplash = ({ theme }) => (
   <div className="logo_wrapper">
     <div className="screen" style={{ backgroundColor: theme.text }}>
-      <LoaderLogo id="logo" theme={theme} />
+      <LoaderLogo className="logo" theme={theme} />
     </div>
   </div>
 );
 
-const Splash = ({ theme }) => {
+const SplashPage = ({ theme }) => {
   const [redirect, setRedirect] = useState(false);
   const splashDuration = 5500;
   const redirectTimer = useRef();
@@ -31,4 +31,4 @@ const Splash = ({ theme }) => {
   );
 };
 
-export default Splash;
+export default SplashPage;

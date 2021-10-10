@@ -1,6 +1,6 @@
 import React from 'react';
-import './ProjectLanguages.css';
 import Tooltip from '../tooltip/Tooltip';
+import './ProjectLanguages.css';
 
 const ProjectLanguages = ({ theme, logos }) => (
   <div>

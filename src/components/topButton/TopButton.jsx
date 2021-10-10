@@ -48,7 +48,7 @@ const onMouseLeave = (color, bgColor) => {
 const TopButton = ({ theme }) => (
   <div
     onClick={GoUpEvent}
-    id="topButton"
+    className="topButton"
     style={{
       color: theme.body,
       backgroundColor: theme.text,

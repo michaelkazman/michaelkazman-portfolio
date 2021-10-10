@@ -6,7 +6,7 @@ import Button from '../../components/button/Button';
 import { greeting } from '../../static/portfolio';
 import FeelingProud from './FeelingProud';
 
-const Greeting = ({ theme }) => (
+const GreetingContainer = ({ theme }) => (
   <Fade bottom duration={2000} distance="40px">
     <div className="greet-main" id="greeting">
       <div className="greeting-main">
@@ -55,4 +55,4 @@ const Greeting = ({ theme }) => (
   </Fade>
 );
 
-export default Greeting;
+export default GreetingContainer;

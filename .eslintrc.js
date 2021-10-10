@@ -27,5 +27,7 @@ module.exports = {
     ], // https://stackoverflow.com/q/39114446/2771889
     "react/jsx-filename-extension": [2, { extensions: [".jsx", ".tsx"] }], // https://stackoverflow.com/q/55614983/
     "react/prop-types": 0,
+    "global-require": 0,
+    "import/no-dynamic-require": 0,
   },
 };
