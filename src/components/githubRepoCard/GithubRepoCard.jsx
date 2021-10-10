@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
 import { Fade } from 'react-reveal';
-import ProjectLanguages from '../projectLanguages/ProjectLanguages';
+import ProjectLanguage from '../projectLanguage/ProjectLanguage';
 import './GithubRepoCard.css';
 
 const openRepoinNewTab = (url) => {
@@ -35,7 +35,7 @@ const GithubRepoCard = ({ repo, theme }) => (
           >
             {repo.createdAt.split('T')[0]}
           </p>
-          <ProjectLanguages
+          <ProjectLanguage
             className="repo-languages"
             logos={repo.languages}
             theme={theme}

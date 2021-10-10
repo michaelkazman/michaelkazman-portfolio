@@ -1,8 +1,8 @@
 import React from 'react';
 import Tooltip from '../tooltip/Tooltip';
-import './ProjectLanguages.css';
+import './ProjectLanguage.css';
 
-const ProjectLanguages = ({ theme, logos }) => (
+const ProjectLanguage = ({ theme, logos }) => (
   <div>
     <div className="software-skills-main-div">
       <ul className="dev-icons-languages">
@@ -26,4 +26,4 @@ const ProjectLanguages = ({ theme, logos }) => (
   </div>
 );
 
-export default ProjectLanguages;
+export default ProjectLanguage;

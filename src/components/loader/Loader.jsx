@@ -1,7 +1,7 @@
 import React from 'react';
-import './LoaderLogo.css';
+import './Loader.css';
 
-const LogoLoader = ({ theme }) => (
+const Loader = ({ theme }) => (
   <svg
     className="raw_logo"
     width="50%"
@@ -159,4 +159,4 @@ const LogoLoader = ({ theme }) => (
   </svg>
 );
 
-export default LogoLoader;
+export default Loader;
