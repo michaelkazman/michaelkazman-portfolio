@@ -45,7 +45,6 @@
 
 .header .menu {
   clear: both;
-  max-height: 0;
   transition: max-height 0.2s ease-out;
 }
 
@@ -89,7 +88,7 @@
 /* nav btn */
 .nav-btn {
   transition: ease-out 0.6s;
-  margin: 0 2px;
+  margin: 0 2px 4px;
 }
 
 .nav-btn:hover {
@@ -124,7 +123,7 @@
 
 /* 48em = 768px */
 
-@media (min-width: 48em) {
+@media (min-width: 54em) {
   .header li {
     float: left;
   }
@@ -140,8 +139,18 @@
     display: none;
   }
 }
-@media (max-width: 960px) and (min-width: 768px) {
+@media (max-width: 960px) and (min-width: 864px) {
   .header {
     font-size: 12px;
+  }
+}
+
+@media (max-width: 54em) {
+  .header .menu {
+    clear: both;
+    margin-top: 24px;
+    padding-top: 24px;
+    flex-wrap: wrap;
+    display: flex;
   }
 }
