@@ -113,19 +113,6 @@ const Header = () => {
             </li>
             <li>
               <NavLink
-                to="/opensource"
-                tag={Link}
-                activeStyle={{ fontWeight: 'bold', backgroundColor: theme.highlight }}
-                style={{ color: theme.text, borderRadius: 5 }}
-                className="nav-btn"
-                onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
-                onMouseOut={(event) => onMouseOut(event)}
-              >
-                Open Source
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
                 to="/contact"
                 tag={Link}
                 activeStyle={{ fontWeight: 'bold', backgroundColor: theme.highlight }}

@@ -62,9 +62,9 @@ const Contact = ({ theme, onToggle }) => (
             </p>
             <div className="blogsite-btn-div">
               <Button
-                text="Checkout My Blog!"
+                text="Coming Soon..."
                 newTab
-                href={blogSection.link}
+                // href={blogSection.link}
                 theme={theme}
               />
             </div>

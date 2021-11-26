@@ -42,12 +42,6 @@ const Main = ({ theme }) => (
           )}
         />
         <Route
-          path="/opensource"
-          render={(props) => (
-            <Opensource {...props} theme={theme} />
-          )}
-        />
-        <Route
           path="/contact"
           render={(props) => (
             <Contact {...props} theme={theme} />
