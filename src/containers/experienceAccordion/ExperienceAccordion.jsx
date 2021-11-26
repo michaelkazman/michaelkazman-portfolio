@@ -5,12 +5,13 @@ import './ExperienceAccordion.css';
 
 const ExperienceAccordion = ({ theme, sections }) => (
   <div className="experience-accord">
-    <Accordion>
+    <Accordion style={{ boxShadow: 'none', backgroundColor: 'transparent' }}>
       {sections.map((section) => (
         <div
           className="accord-panel"
           title={section.title}
           key={section.title}
+          style={{ backgroundColor: theme.body }}
         >
           {section.experiences.map((experience) => (
             <ExperienceCard key={`${experience.title}`} experience={experience} theme={theme} />

@@ -161,8 +161,12 @@ const skills = {
     },
     {
       title: "Back-End Development",
-      fileName: "FullStackImg",
-      skills: ["Building resposive website front end using React-Redux"],
+      fileName: "UndrawCodingImg",
+      skills: [
+        "Develops low-level system code with C and C++",
+        "Builds robust REST back-ends using Java and Spring",
+        "Architecture design experience using Python's Django framework",
+      ],
       softwareSkills: [
         {
           skillName: "Python",
@@ -351,7 +355,7 @@ const skills = {
     },
     {
       title: "Misc",
-      fileName: "CloudInfraImg",
+      fileName: "GitActivityImg",
       skills: [
         "Working experience in various environments (Unix, MacOS, Windows)",
         "Scripting experience using Python, Bash, and Google Scripts",
@@ -528,7 +532,7 @@ const certifications = {
 // Experience Page
 const experience = {
   title: "Experience",
-  subtitle: "Work, Internship and Volunteering",
+  subtitle: "Work & Internships",
   description:
     "I have worked with a number of diverse and growing companies wearing many different hats. From low-level system design and networking to data-science pipelines and full-stack development, I have expereience across the board. With technology being such a diverse field, I can never truley get enough of the various branches.",
   header_image_path: "experience.svg",
@@ -556,7 +560,7 @@ const experience = {
           duration: "May 2020 - Aug 2020",
           location: "Toronto, ON",
           description:
-            "Patented machine learning solutions utilizing voice recognition, clustering, and a hybridized recommendation engine. Designed, developed, and pitched a cloud-based market data management platform as a cross-functional team lead",
+            "Patented machine learning solutions utilizing voice recognition, clustering, and a hybridized recommendation engine. Designed, developed, and pitched a cloud-based market data management platform as a cross-functional team lead.",
           tasks: [
             "React",
             "Recharts",
@@ -573,13 +577,16 @@ const experience = {
           company: "BingeTV",
           company_url:
             "https://www.https://www.linkedin.com/company/binge-media/",
-          logo_path: "binge_logo.jpeg",
+          logo_path: "binge_logo.png",
           duration: "Oct 2019 - Jan 2020",
           location: "Toronto, ON",
           description:
             "Created a multi-media online platform dedicated to original content encompassing sports, mental health, and popular culture.",
           tasks: ["Wix", "Adobe Suite", "Corvid", "JavaScript"],
           color: "#0879bf",
+          imgStyle: {
+            borderRadius: 6,
+          },
         },
         {
           title: "Full-Stack Developer, Co-op",
@@ -589,7 +596,7 @@ const experience = {
           duration: "May 2019 - Dec 2019",
           location: "Kanata, ON",
           description:
-            "Engineered custom features for major academic institutions. Redesigned the online e-classroom through a UI/UX overhaul",
+            "Engineered custom features for major academic institutions. Redesigned the online e-classroom through a UI/UX overhaul.",
           tasks: ["React", "MongoDB", "Node.js", "Meteor", "Jira"],
           color: "#0879bf",
         },
@@ -601,7 +608,7 @@ const experience = {
           duration: "Sept 2018 - Dec 2018",
           location: "Kanata, ON",
           description:
-            "Testing and QA for the dynamic VLAN registration of SDNs. Bottleneck analysis of custom data structures on L2 switches",
+            "Testing and QA for the dynamic VLAN registration of SDNs. Bottleneck analysis of custom data structures on L2 switches.",
           tasks: ["C", "C++", "VLANs", "TCP/IP", "Bash", "Git"],
           color: "#0879bf",
           imgStyle: {
@@ -690,7 +697,7 @@ const experience = {
 const projectsHeader = {
   title: "Projects",
   description:
-    "My projects makes use of vast variety of latest technology tools. My best experience is to create Data Science projects and deploy them to web applications using cloud infrastructure.",
+    "My personal projects range from niche machine learning solutions to obscure video game development. May it be software and hardware hacks or cryptography and front-end development, I've always been interested in the various facets of technology. A personal project is the perfect playground to test this emerging tech, and as you'll see, that's exactly what I do.",
   avatar_image_path: "projects_image.svg",
 };
 

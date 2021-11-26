@@ -4,7 +4,7 @@ import './ExperienceCard.css';
 const ExperienceCard = ({ theme, experience }) => (
   <div
     className="experience-card"
-    style={{ border: `1px solid ${experience.color}` }}
+    style={{ border: `1px solid ${experience.color}`, backgroundColor: theme.highlight }}
   >
     <div className="experience-card-logo-div">
       <img
@@ -25,12 +25,12 @@ const ExperienceCard = ({ theme, experience }) => (
           </h3>
           <p
             className="experience-card-company"
-            style={{ color: theme.text }}
           >
             <a
               href={experience.company_url}
               target="_blank"
               rel="noopener noreferrer"
+              style={{ color: theme.dark }}
             >
               {experience.company}
             </a>
@@ -39,13 +39,13 @@ const ExperienceCard = ({ theme, experience }) => (
         <div className="experience-card-heading-right">
           <p
             className="experience-card-duration"
-            style={{ color: theme.secondaryText }}
+            style={{ color: theme.dark }}
           >
             {experience.duration}
           </p>
           <p
             className="experience-card-location"
-            style={{ color: theme.secondaryText }}
+            style={{ color: theme.dark }}
           >
             {experience.location}
           </p>
