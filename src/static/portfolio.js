@@ -704,7 +704,7 @@ const publicationsHeader = {
 // Contact Page
 const contactPageData = {
   contactSection: {
-    title: "Contact Me",
+    title: "Contact",
     profile_image_path: "michaelkazman_headshot.png",
     description:
       "Feel free to reach out!\nYou can contact me through email or on LinkedIn.",

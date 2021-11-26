@@ -1,9 +1,9 @@
 import React from 'react';
 import './Achievement.css';
-import AchivementCard from '../../components/achievementCard/AchivementCard';
+import AchievementCard from '../../components/achievementCard/AchievementCard';
 import { achievementSection } from '../../static/portfolio';
 
-const Achievement = () => (
+const AchievementContainer = () => (
   <div className="main" id="achievements">
     <div className="achievement-main-div">
       <div className="achievement-header">
@@ -16,7 +16,7 @@ const Achievement = () => (
       </div>
       <div className="achievement-cards-div">
         {achievementSection.achivementsCards.map((card) => (
-          <AchivementCard
+          <AchievementCard
             cardInfo={{
               title: card.title,
               description: card.subtitle,
@@ -30,4 +30,4 @@ const Achievement = () => (
   </div>
 );
 
-export default Achievement;
+export default AchievementContainer;

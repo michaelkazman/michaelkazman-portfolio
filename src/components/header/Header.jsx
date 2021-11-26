@@ -2,10 +2,11 @@ import React from 'react';
 import './Header.css';
 import { Fade } from 'react-reveal';
 import { NavLink, Link } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { greeting, settings } from '../../static/portfolio';
 import SeoHeader from '../seoHeader/SeoHeader';
-import { themeUpdated, selectTheme, selectThemeId } from '../../app/theme/themeSlice';
+import { selectTheme } from '../../app/theme/themeSlice';
+import ThemeToggle from '../themeToggle/ThemeToggle';
 
 const onMouseEnter = (event, color) => {
   const el = event.target;
@@ -19,28 +20,8 @@ const onMouseOut = (event) => {
   }
 };
 
-const themeIconStyle = (isLightTheme) => ({
-  cursor: 'pointer',
-  height: '45px',
-  width: '45px',
-  marginRight: '5px',
-  marginLeft: '15px',
-  paddingTop: '5px',
-  borderRadius: '50%',
-  fontSize: '20pt',
-  border: 'none',
-  alignItems: 'center',
-  justifyContent: 'center',
-  backgroundColor: isLightTheme ? '#80BAA7' : '#292C3F',
-  outline: 'none',
-  transition: 'all 0.2s ease-in-out',
-});
-
 const Header = () => {
-  const dispatch = useDispatch();
   const theme = useSelector((state) => selectTheme(state));
-  const themeId = useSelector((state) => selectThemeId(state));
-  const isLightTheme = themeId === 'light';
   const link = settings.isSplash ? '/splash' : 'home';
   return (
     <Fade top duration={1000} distance="20px">
@@ -55,9 +36,6 @@ const Header = () => {
             <span className="logo-name" style={{ color: theme.text, borderRadius: 5, padding: 0 }}>/&gt;</span>
           </NavLink>
           <input className="menu-btn" type="checkbox" id="menu-btn" />
-          {/* <label className="menu-icon" htmlFor="menu-btn">
-            <span className="navicon" />
-          </label> */}
           <ul className="menu">
             <li>
               <NavLink
@@ -124,20 +102,7 @@ const Header = () => {
                 Contact
               </NavLink>
             </li>
-            <button
-              style={{ ...themeIconStyle(isLightTheme) }}
-              onClick={() => dispatch(themeUpdated())}
-              type="button"
-            >
-              <i
-                className={`fas ${isLightTheme ? 'fa-moon' : 'fa-sun'}`}
-                style={{
-                  strokeWidth: 1,
-                  size: 20,
-                  color: isLightTheme ? '#E1ECE8' : '#F9D784',
-                }}
-              />
-            </button>
+            <ThemeToggle />
           </ul>
         </header>
       </div>

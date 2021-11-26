@@ -8,7 +8,7 @@ import './Experience.css';
 import { experience } from '../../static/portfolio';
 import ExperienceImg from './ExperienceImg';
 
-const Experience = ({ theme, onToggle }) => (
+const ExperiencePage = ({ theme, onToggle }) => (
   <div className="experience-main">
     <Header theme={theme} />
     <div className="basic-experience">
@@ -46,4 +46,4 @@ const Experience = ({ theme, onToggle }) => (
   </div>
 );
 
-export default Experience;
+export default ExperiencePage;
