@@ -110,8 +110,8 @@ export const greenTheme = {
 export const darkGreenTheme = {
   body: "#1D1D1D",
   text: "#FFFFFF",
-  highlight: "#9BEED8",
-  dark: "#031E26",
+  highlight: "#1d2e2a",
+  dark: "#E6E6E6",
   secondaryText: "#528190",
   imageHighlight: "#07beb8",
   compImgHighlight: "#E6E6E6",

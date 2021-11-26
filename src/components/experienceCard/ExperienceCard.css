@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  box-shadow: none;
 }
 
 .experience-card-logo-div {
@@ -81,12 +82,7 @@
 
 .experience-card-company > a {
   position: relative;
-  color: #000;
   text-decoration: none;
-}
-
-.experience-card-company > a:hover {
-  color: #000;
 }
 
 .experience-card-company > a:hover:before {

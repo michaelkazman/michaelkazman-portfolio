@@ -4,10 +4,10 @@ import React from 'react';
 import './PublicationCard.css';
 import { Fade } from 'react-reveal';
 
-const openRepoinNewTab = (url) => {
-  const win = window.open(url, '_blank');
-  win.focus();
-};
+// const openRepoinNewTab = (url) => {
+//   const win = window.open(url, '_blank');
+//   win.focus();
+// };
 
 const GithubRepoCard = ({ repo, theme }) => (
   <div>
@@ -15,7 +15,7 @@ const GithubRepoCard = ({ repo, theme }) => (
       <div
         className="publication-card-div"
         key={repo.id}
-        onClick={() => openRepoinNewTab(repo.url)}
+        // onClick={() => openRepoinNewTab(repo.url)}
         style={{ backgroundColor: theme.highlight }}
       >
         <div className="publication-name-div">

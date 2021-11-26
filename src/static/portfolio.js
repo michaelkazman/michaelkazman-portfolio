@@ -59,9 +59,9 @@ const skills = {
       title: "Front-End Development",
       fileName: "FullStackImg",
       skills: [
-        "Building resposive website front end using React-Redux",
-        "Developing mobile applications using Flutter, React Native and solo android apps using Kotlin",
-        "Creating application backend in Node, Express & Flask",
+        "Builds responsive web apps using Javascript, React, Jest, and Redux",
+        "Designs dynamic interactive components using Bootstrap, Material-UI, and Sass",
+        "Develops web-based backends with NodeJS, NextJS, Express, and MongoDB",
       ],
       softwareSkills: [
         {
@@ -161,11 +161,11 @@ const skills = {
     },
     {
       title: "Back-End Development",
-      fileName: "FullStackImg",
+      fileName: "UndrawCodingImg",
       skills: [
-        "Building resposive website front end using React-Redux",
-        "Developing mobile applications using Flutter, React Native and solo android apps using Kotlin",
-        "Creating application backend in Node, Express & Flask",
+        "Develops low-level system code with C and C++",
+        "Builds robust REST back-ends using Java and Spring",
+        "Architecture design experience using Python's Django framework",
       ],
       softwareSkills: [
         {
@@ -216,9 +216,10 @@ const skills = {
       title: "Data Science & AI",
       fileName: "DataScienceImg",
       skills: [
-        "Developing highly scalable production ready models for various deeplearning and statistical use cases",
-        "Experience of working with Computer Vision and NLP projects",
-        "Complex quantitative modelling for dynamic forecasting and time series analysis",
+        "Working experience with recommender systems, clustering algorithms, and regression models",
+        "Develops machine learning and neural network models using Keras, TensorFlow, and scikit-learn",
+        "Builds production-ready pipelines using Python3, Jupyter, and Anaconda",
+        "Visualizes statistical data using NumPy, Pandas, matplotlib, Bokeh, Altair, and plotnine",
       ],
       softwareSkills: [
         {
@@ -271,9 +272,9 @@ const skills = {
       title: "UI/UX Design",
       fileName: "DesignImg",
       skills: [
-        "Designing highly attractive user interface for mobile and web applications",
-        "Customizing logo designs and building logos from scratch",
-        "Creating the flow of application functionalities to optimize user experience",
+        "Designs highly attractive user interfaces for both mobile and web apps",
+        "Describes process flows and user journeys through visualization tools like Miro, Sketch, and Figma",
+        "Builds concise digestible slide decks to elegantly illustrate stakeholder requirements and project roadmaps",
       ],
       softwareSkills: [
         {
@@ -310,10 +311,9 @@ const skills = {
       title: "Cloud Infra-Architecture",
       fileName: "CloudInfraImg",
       skills: [
-        "Experience working on multiple cloud platforms",
-        "Hosting and maintaining websites on virtual machine instances along with integration of databases",
-        "Deploying deep learning models on cloud to use on mobile devices",
-        "Setting up streaming jobs from DB to Server or vice-versa on GCP and AWS",
+        "Working experience on various cloud platforms like Amazon Web Services, Microsoft Azure, and Google Cloud Platform",
+        "Familiarity with AI infrastructure deployment for services like custom image recognition, natural language understanding, and insightful analytics",
+        "Orchestration of containers using Docker, OpenShift, and Pivotal Cloud Foundry",
       ],
       softwareSkills: [
         {
@@ -355,8 +355,12 @@ const skills = {
     },
     {
       title: "Misc",
-      fileName: "CloudInfraImg",
-      skills: ["Insert stuff here"],
+      fileName: "GitActivityImg",
+      skills: [
+        "Working experience in various environments (Unix, MacOS, Windows)",
+        "Scripting experience using Python, Bash, and Google Scripts",
+        "Project management using Git, Jira, Trello, Slack, Asana, and Confluence",
+      ],
       softwareSkills: [
         {
           skillName: "MacOS",
@@ -458,36 +462,20 @@ const skills = {
 const competitiveSites = {
   competitiveSites: [
     {
-      siteName: "HackerRank",
-      iconifyClassname: "simple-icons:hackerrank",
+      siteName: "StackOverflow",
+      iconifyClassname: "simple-icons:stackoverflow",
       style: {
-        color: "#2EC866",
+        color: "#F58025",
       },
-      profileLink: "https://www.hackerrank.com/layman_brother",
+      profileLink: "https://stackoverflow.com/users/9837834/seniorfluffie",
     },
     {
-      siteName: "Codechef",
-      iconifyClassname: "simple-icons:codechef",
+      siteName: "Credly",
+      iconifyClassname: "simple-icons:c",
       style: {
-        color: "#5B4638",
+        color: "#FF6C04",
       },
-      profileLink: "https://www.codechef.com/users/ashutosh_1919",
-    },
-    {
-      siteName: "Codeforces",
-      iconifyClassname: "simple-icons:codeforces",
-      style: {
-        color: "#1F8ACB",
-      },
-      profileLink: "http://codeforces.com/profile/layman_brother",
-    },
-    {
-      siteName: "Hackerearth",
-      iconifyClassname: "simple-icons:hackerearth",
-      style: {
-        color: "#323754",
-      },
-      profileLink: "https://www.hackerearth.com/@ashutosh391",
+      profileLink: "https://www.credly.com/users/michael-kazman",
     },
     {
       siteName: "Kaggle",
@@ -495,7 +483,15 @@ const competitiveSites = {
       style: {
         color: "#20BEFF",
       },
-      profileLink: "https://www.kaggle.com/laymanbrother",
+      profileLink: "https://www.kaggle.com/michaelkazman",
+    },
+    {
+      siteName: "HackerRank",
+      iconifyClassname: "simple-icons:hackerrank",
+      style: {
+        color: "#2EC866",
+      },
+      profileLink: "https://www.hackerrank.com/michael_kazman",
     },
   ],
 };
@@ -536,9 +532,9 @@ const certifications = {
 // Experience Page
 const experience = {
   title: "Experience",
-  subtitle: "Work, Internship and Volunteering",
+  subtitle: "Work & Internships",
   description:
-    "I have worked with many evolving startups as ML and DL Developer, Designer and Software Architect. I have also worked with some well established companies mostly as AI Developer. I love organising events and that is why I am also involved with many opensource communities as a representative.",
+    "I have worked with a number of diverse and growing companies wearing many different hats. From low-level system design and networking to data-science pipelines and full-stack development, I have expereience across the board. With technology being such a diverse field, I can never truley get enough of the various branches.",
   header_image_path: "experience.svg",
   sections: [
     {
@@ -551,11 +547,9 @@ const experience = {
           logo_path: "rbc_logo.png",
           duration: "July 2021 - Present",
           location: "Toronto, ON",
-          description: "Ooga booga i did a job thing",
-          tasks: [
-            "Researched, designed, and developed the platform's new UI",
-            "Refactored entire front-end to use themeing, pattern-matching, and testing best practices with MUI, Husky, and ESLint libraries",
-          ],
+          description:
+            "Researched, designed, and developed the platform’s new UI. Restored entire front-end to use themeing, pattern-matching and testing best practises with MUI, Husky and ESLint libraries.",
+          tasks: ["React", "Redux", "Jest", "Django", "Node.js", "Material-UI"],
           color: "#0879bf",
         },
         {
@@ -565,12 +559,34 @@ const experience = {
           logo_path: "rbc_logo.png",
           duration: "May 2020 - Aug 2020",
           location: "Toronto, ON",
-          description: "Ooga booga i did a job thing",
+          description:
+            "Patented machine learning solutions utilizing voice recognition, clustering, and a hybridized recommendation engine. Designed, developed, and pitched a cloud-based market data management platform as a cross-functional team lead.",
           tasks: [
-            "Patented machine learning solutions utilizing voice recognition, clustering, and a hybridized recommendation engine",
-            "Designed, developed, and pitched a cloud-based market data management platform as a cross-functional team lead",
+            "React",
+            "Recharts",
+            "Node.js",
+            "Patented ML Recommendation Engine",
+            "OpenShift",
+            "Amazon S3",
+            "Semantic-UI",
           ],
           color: "#0879bf",
+        },
+        {
+          title: "Web Designer",
+          company: "BingeTV",
+          company_url:
+            "https://www.https://www.linkedin.com/company/binge-media/",
+          logo_path: "binge_logo.png",
+          duration: "Oct 2019 - Jan 2020",
+          location: "Toronto, ON",
+          description:
+            "Created a multi-media online platform dedicated to original content encompassing sports, mental health, and popular culture.",
+          tasks: ["Wix", "Adobe Suite", "Corvid", "JavaScript"],
+          color: "#0879bf",
+          imgStyle: {
+            borderRadius: 6,
+          },
         },
         {
           title: "Full-Stack Developer, Co-op",
@@ -579,11 +595,9 @@ const experience = {
           logo_path: "tutorocean_logo.png",
           duration: "May 2019 - Dec 2019",
           location: "Kanata, ON",
-          description: "Ooga booga i did a job thing",
-          tasks: [
-            "Engineered custom features for major academic institutions",
-            "Redesigned the online e-classroom through a UI/UX overhaul",
-          ],
+          description:
+            "Engineered custom features for major academic institutions. Redesigned the online e-classroom through a UI/UX overhaul.",
+          tasks: ["React", "MongoDB", "Node.js", "Meteor", "Jira"],
           color: "#0879bf",
         },
         {
@@ -593,10 +607,47 @@ const experience = {
           logo_path: "siemens_logo.png",
           duration: "Sept 2018 - Dec 2018",
           location: "Kanata, ON",
-          description: "Ooga booga i did a job thing",
+          description:
+            "Testing and QA for the dynamic VLAN registration of SDNs. Bottleneck analysis of custom data structures on L2 switches.",
+          tasks: ["C", "C++", "VLANs", "TCP/IP", "Bash", "Git"],
+          color: "#0879bf",
+          imgStyle: {
+            borderRadius: 6,
+          },
+        },
+        {
+          title: "Information Technology Assistant",
+          company: "Walking On A Cloud",
+          company_url: "https://www.walkingonacloud.com/",
+          logo_path: "woac_logo.jpeg",
+          duration: "May 2017 - Sept 2017",
+          location: "Toronto, ON",
+          description:
+            "Responsible for the support and maintenance of in-house computer systems, networks, and peripherals. Set up scripts, functions, and formatting for Excel-based documents.",
           tasks: [
-            "Testing and QA for the dynamic VLAN registration of SDNs",
-            "Bottleneck analysis of custom data structures on L2 switches",
+            "Microsoft Excel",
+            "Google Sheets scripting",
+            "G-Suite analytics",
+            "Magento e-Commerce",
+          ],
+          color: "#0879bf",
+          imgStyle: {
+            borderRadius: 6,
+          },
+        },
+        {
+          title: "Computer Technician Co-op",
+          company: "WebPromotions Internet Services Inc.",
+          company_url: "http://www.webpromo-inc.com/",
+          logo_path: "webpromo_logo.png",
+          duration: "May 2017 - Sept 2017",
+          location: "Toronto, ON",
+          description:
+            "Constructed, modified, and deconstructed computer systems.",
+          tasks: [
+            "Microsoft Excel",
+            "Magento e-Commerce",
+            "Hardware repair and installation",
           ],
           color: "#0879bf",
           imgStyle: {
@@ -646,7 +697,7 @@ const experience = {
 const projectsHeader = {
   title: "Projects",
   description:
-    "My projects makes use of vast variety of latest technology tools. My best experience is to create Data Science projects and deploy them to web applications using cloud infrastructure.",
+    "My personal projects range from niche machine learning solutions to obscure video game development. May it be software and hardware hacks or cryptography and front-end development, I've always been interested in the various facets of technology. A personal project is the perfect playground to test this emerging tech, and as you'll see, that's exactly what I do.",
   avatar_image_path: "projects_image.svg",
 };
 

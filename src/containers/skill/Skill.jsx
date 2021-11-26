@@ -7,12 +7,19 @@ import DataScienceImg from './DataScienceImg';
 import FullStackImg from './FullStackImg';
 import CloudInfraImg from './CloudInfraImg';
 import DesignImg from './DesignImg';
+import WebDeveloperImg from './WebDeveloperImg';
+import UndrawCodingImg from './UndrawCodingImg';
+import GitActivityImg from './GitActivityImg';
 
 const GetSkillSvg = ({ fileName, theme }) => {
   let skillSVG = <DesignImg theme={theme} />;
   if (fileName === 'DataScienceImg') skillSVG = <DataScienceImg theme={theme} />;
   if (fileName === 'FullStackImg') skillSVG = <FullStackImg theme={theme} />;
   if (fileName === 'CloudInfraImg') skillSVG = <CloudInfraImg theme={theme} />;
+  if (fileName === 'WebDeveloperImg') skillSVG = <WebDeveloperImg theme={theme} />;
+  if (fileName === 'UndrawCodingImg') skillSVG = <UndrawCodingImg theme={theme} />;
+  if (fileName === 'GitActivityImg') skillSVG = <GitActivityImg theme={theme} />;
+  if (fileName === 'GitActivityImg') skillSVG = <GitActivityImg theme={theme} />;
   return skillSVG;
 };
 
